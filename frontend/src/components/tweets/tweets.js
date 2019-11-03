@@ -10,16 +10,12 @@ class Tweet extends React.Component {
             tweets: []
         }
     }
-
-    componenDidMount() {
+    componentDidMount() {
         this.props.fetchTweets();
     }
 
     static getDerivedStateFromProps(nextProps, prevState) {
-        if (nextProps.tweets !== prevState.tweets) {
-            return { tweets: nextProps.tweets };
-        }
-        else return null;
+        return { tweets: nextProps.tweets }
     }
 
     // componentWillReceiveProps(newState) {

@@ -15,7 +15,6 @@ class TweetCompose extends React.Component {
 
     static getDerivedStateFromProps(nextProps, prevState) {
         if (nextProps.newTweet) {
-            debugger
             return { newTweet: nextProps.newTweet.text };
         }
         else return null;
